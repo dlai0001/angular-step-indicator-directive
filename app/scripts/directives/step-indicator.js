@@ -41,8 +41,13 @@ angular.module('angularComponentsApp')
         		})($(stepDivs[i]));
         	}
 
-        	//adjust background progressbar to extend to the active element        	
-        	element.find(".progress-bar.inner").css("width", activeElemPos + "px");
+        	//adjust background progressbar to extend to the active element
+        	if(activeElemPos) {
+        		element.find(".progress-bar.inner").css("width", activeElemPos + "px");
+        	} else if(parseInt(attrs.step) > 0 ) {
+        		element.find(".progress-bar.inner").css("width", 
+        			$(stepDivs[stepDivs.length-1]).position().left + "px");
+        	}
         });
       }
     };
