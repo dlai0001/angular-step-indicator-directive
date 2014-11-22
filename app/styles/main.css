@@ -1,0 +1,166 @@
+/* Space out content a bit */
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Custom page header */
+.header {
+  border-bottom: 1px solid #e5e5e5;
+}
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+  padding-bottom: 19px;
+}
+
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+/* Customize container */
+@media (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+}
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+.jumbotron .btn {
+  font-size: 21px;
+  padding: 14px 24px;
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+}
+.marketing p + h4 {
+  margin-top: 28px;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
+
+/* Step indicator */
+div.step-indicator {
+  display: inline-block;
+  position: relative;
+}
+
+div.step-indicator div.step {
+  display: inline-block;   
+  position: relative;   
+  font-weight: 400;
+  height: 4em;
+  width: 4em;
+  border-radius: 2em;
+  text-align: center;
+  padding-top: 1em;
+  font-size: 0.6em;
+  font-weight: 600;
+  z-index: 4;
+  margin-left: 1em;
+  margin-right: 1em;
+  transition: width color 0.5s ease;
+  transition-delay: 0.5s;
+  border-color: #FFFFFF;
+  border: 0.3em solid;
+  box-sizing: border-box;
+}
+
+div.step-indicator div.step.completed {
+  background-color: #D2EBFF;
+  color: #FFFFFF;
+}
+
+div.step-indicator div.step.active {
+  background-color: #1690E3;
+  color: #FFFFFF;
+}
+
+div.step-indicator div.steps > div.step.inactive {
+  background-color: #F2F2F2;
+  color: #C8C8C8;
+}
+
+div.step-indicator div.step > span.completed {
+  display: none;
+  color: #000000;
+}
+div.step-indicator div.step.completed > span.completed {
+  display: inherit;
+}
+div.step-indicator div.step > span.incomplete {
+  display: inherit;
+}
+div.step-indicator div.step.completed > span.incomplete {
+  display: none;
+}
+
+div.step-indicator > div.steps {
+  display: inline;
+}
+
+div.step-indicator div.progress-bar {
+  position: absolute;    
+  left: 1em;
+}
+
+div.step-indicator > div.progress-bar.inner {  
+  top: 40%;  
+  height: 20%;
+  background-color: #1690E3;  
+  z-index: 3;  
+  transition: all 0.5s linear;
+}
+
+div.step-indicator > div.progress-bar.outer {    
+  position: absolute;
+  top: 30%;
+  width: auto;
+  right: 1em;
+  margin-left: 20px;
+  height: 40%;  
+  background-color: #FFFFFF;  
+  z-index: 2;
+}
+
+
+/* end step indicator */

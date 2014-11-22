@@ -1,0 +1,25 @@
+<div class="jumbotron">
+  <h1>'Allo, 'Allo!</h1>
+  <p class="lead">
+    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
+    Always a pleasure scaffolding your apps.
+  </p>
+  <p><a class="btn btn-lg btn-success" ng-href="#">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
+</div>
+Step:<input ng-model="step" type="number"/>
+<div style="background-color: #1690E3; padding: 0.2em 1em 0.2em 1em;">  
+  <step-indicator step="{{step}}">
+    <div class="step" data-step="1">
+    <span class="incomplete">Step 1</span>
+    <span class="completed">✔</span>
+  </div>
+  <div class="step" data-step="2">
+    <span class="incomplete">Step 2</span>
+    <span class="completed">✔</span>
+  </div>
+  <div class="step" data-step="3">
+    <span class="incomplete">Step 3</span>
+    <span class="completed">✔</span>
+  </div>
+  </step-indicator>
+</div>
