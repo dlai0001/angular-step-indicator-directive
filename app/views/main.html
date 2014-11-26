@@ -7,8 +7,10 @@
   <p><a class="btn btn-lg btn-success" ng-href="#">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
 </div>
 Step:<input ng-model="step" type="number"/>
-<div style="background-color: #1690E3; padding: 0.2em 1em 0.2em 1em;">  
-  <step-indicator step="{{step}}">
+<div style="background-color: #1690E3; padding: 0.2em 1em 0.2em 1em;width:100%;height:3.4em;">  
+  <div class="pull-right">
+
+<step-indicator step="{{step}}">
     <div class="outline">
       <div class="step" data-step="1">
         <span class="incomplete">Step 1</span>
@@ -28,4 +30,8 @@ Step:<input ng-model="step" type="number"/>
       </div>
     </div>
   </step-indicator>
+
+
+  </div>
+  
 </div>
