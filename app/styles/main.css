@@ -84,6 +84,18 @@ div.step-indicator {
   position: relative;
 }
 
+div.step-indicator div.outline {
+  display: inline-block;
+  padding: 0.2em;
+  border-radius: 2.1em;
+  border-color: #FFFFFF;
+  background-color: #FFFFFF;
+  box-sizing: content-box;
+  margin-left: 1em;
+  margin-right: 1em;
+  z-index: 4;
+}
+
 div.step-indicator div.step {
   display: inline-block;   
   position: relative;   
@@ -96,8 +108,6 @@ div.step-indicator div.step {
   font-size: 0.6em;
   font-weight: 600;
   z-index: 4;
-  margin-left: 1em;
-  margin-right: 1em;
   transition: width color 0.5s ease;
   transition-delay: 0.5s;
   border-color: #FFFFFF;
@@ -108,33 +118,57 @@ div.step-indicator div.step {
 div.step-indicator div.step.completed {
   background-color: #D2EBFF;
   color: #FFFFFF;
+  border-color: #1989D3;
 }
 
 div.step-indicator div.step.active {
   background-color: #1690E3;
   color: #FFFFFF;
+  border-color: #1989D3;  
 }
 
-div.step-indicator div.steps > div.step.inactive {
+div.step-indicator div.step.inactive {
+  border-color: color: #1989D3;
+}
+
+div.step-indicator div.steps div.step.inactive {
   background-color: #F2F2F2;
   color: #C8C8C8;
+  border-color: #FFFFFF;
 }
 
-div.step-indicator div.step > span.completed {
+div.step-indicator div.step span.completed {
   display: none;
   color: #000000;
 }
-div.step-indicator div.step.completed > span.completed {
-  display: inherit;
-}
-div.step-indicator div.step > span.incomplete {
-  display: inherit;
-}
-div.step-indicator div.step.completed > span.incomplete {
-  display: none;
+
+div.step-indicator div.step span.incomplete {
+  display: inherit;  
+  font-weight: 600;
+  color: #A0A0A0;
 }
 
-div.step-indicator > div.steps {
+div.step-indicator div.step.completed > span.completed {
+  display: inherit;
+  color: #1989D3;
+}
+
+div.step-indicator div.step.active > span.incomplete {
+  white-space: nowrap;
+  color: #FFFFFF;  
+}
+
+div.step-indicator div.step.completed > span.incomplete {
+  display: none;  
+}
+
+div.step-indicator div.step.completed > span.completed {
+    color: #1989D3;
+    font-weight: 800;    
+    transform: scale(2,2);
+}
+
+div.step-indicator div.steps {
   display: inline;
 }
 
@@ -144,10 +178,14 @@ div.step-indicator div.progress-bar {
 }
 
 div.step-indicator > div.progress-bar.inner {  
+  position: absolute;
   top: 40%;  
   height: 20%;
+  left: 1.5em;
+  right: 1.5em;
   background-color: #1690E3;  
-  z-index: 3;  
+  z-index: 3;
+
   transition: all 0.5s linear;
 }
 
@@ -155,11 +193,14 @@ div.step-indicator > div.progress-bar.outer {
   position: absolute;
   top: 30%;
   width: auto;
-  right: 1em;
+  right: 1.5em;
+  left: 1.5em;
   margin-left: 20px;
   height: 40%;  
-  background-color: #FFFFFF;  
+  background-color: #FFFFFF;
+  border: 0px;
   z-index: 2;
+  box-shadow: 0px 0px 0px;
 }
 
 

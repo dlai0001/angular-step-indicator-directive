@@ -47,7 +47,9 @@ angular.module('angularComponentsApp')
         	} else if(parseInt(attrs.step) > 0 ) {
         		element.find(".progress-bar.inner").css("width", 
         			$(stepDivs[stepDivs.length-1]).position().left + "px");
-        	}
+        	} else {
+            element.find(".progress-bar.inner").css("width", "0px");
+          }
         });
       }
     };

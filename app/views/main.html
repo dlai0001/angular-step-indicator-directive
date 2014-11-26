@@ -9,17 +9,23 @@
 Step:<input ng-model="step" type="number"/>
 <div style="background-color: #1690E3; padding: 0.2em 1em 0.2em 1em;">  
   <step-indicator step="{{step}}">
-    <div class="step" data-step="1">
-    <span class="incomplete">Step 1</span>
-    <span class="completed" style="font-weight:800;">✔</span>
-  </div>
-  <div class="step" data-step="2">
-    <span class="incomplete">Step 2</span>
-    <span class="completed" style="font-weight:800;">✔</span>
-  </div>
-  <div class="step" data-step="3">
-    <span class="incomplete">Step 3</span>
-    <span class="completed" style="font-weight:800;">:)</span>
-  </div>
+    <div class="outline">
+      <div class="step" data-step="1">
+        <span class="incomplete">Step 1</span>
+        <span class="completed" style="font-weight:800;">✔</span>
+      </div>
+    </div>
+    <div class="outline">
+      <div class="step" data-step="2">
+        <span class="incomplete">Step 2</span>
+        <span class="completed" style="font-weight:800;">✔</span>
+      </div>
+    </div>
+    <div class="outline">
+      <div class="step" data-step="3">
+        <span class="incomplete">Step 3</span>
+        <span class="completed" style="font-weight:800;">:)</span>
+      </div>
+    </div>
   </step-indicator>
 </div>
