@@ -164,8 +164,8 @@ div.step-indicator div.step.completed > span.incomplete {
 
 div.step-indicator div.step.completed > span.completed {
     color: #1989D3;
-    font-weight: 800;    
-    transform: scale(2,2);
+    font-weight: 600;    
+    transform: scale(1.5,1.5);
 }
 
 div.step-indicator div.steps {
